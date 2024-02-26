@@ -90,15 +90,15 @@ if __name__ == '__main__':
         model = GPT2LMHeadModel.from_pretrained("gpt2-xl").to(args.device)
         tokenizer = GPT2Tokenizer.from_pretrained("gpt2-xl") 
     elif args.model == 'vicuna':
-        model = AutoModelForCausalLM.from_pretrained("/home/myid/xw54582/IIFT/weights/vicuna/hf_models/7B/", cache_dir="./cache").float().to(args.device)
-        tokenizer = AutoTokenizer.from_pretrained("/home/myid/xw54582/IIFT/weights/vicuna/hf_models/7B/", use_fast=False, padding_side="left", cache_dir="./cache")
+        model = AutoModelForCausalLM.from_pretrained("/home/myid//IIFT/weights/vicuna/hf_models/7B/", cache_dir="./cache").float().to(args.device)
+        tokenizer = AutoTokenizer.from_pretrained("/home/myid//IIFT/weights/vicuna/hf_models/7B/", use_fast=False, padding_side="left", cache_dir="./cache")
         #template = "A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions.\n\nUSER: " #%s\nASSISTANT:"
     elif args.model == 'llama':
-        model = AutoModelForCausalLM.from_pretrained("/home/myid/xw54582/IIFT/weights/llama/hf_models/7B/", cache_dir="./cache").float().to(args.device)
-        tokenizer = AutoTokenizer.from_pretrained("/home/myid/xw54582/IIFT/weights/llama/hf_models/7B/", use_fast=False, padding_side="left", cache_dir="./cache")
+        model = AutoModelForCausalLM.from_pretrained("/home/myid//IIFT/weights/llama/hf_models/7B/", cache_dir="./cache").float().to(args.device)
+        tokenizer = AutoTokenizer.from_pretrained("/home/myid//IIFT/weights/llama/hf_models/7B/", use_fast=False, padding_side="left", cache_dir="./cache")
     elif args.model == 'llama-13b':
-        model = AutoModelForCausalLM.from_pretrained("/home/myid/xw54582/IIFT/weights/vicuna/hf_models/13B/", cache_dir="./cache").float().to(args.device)
-        tokenizer = AutoTokenizer.from_pretrained("/home/myid/xw54582/IIFT/weights/vicuna/hf_models/13B/", use_fast=False, padding_side="left", cache_dir="./cache")
+        model = AutoModelForCausalLM.from_pretrained("/home/myid//IIFT/weights/vicuna/hf_models/13B/", cache_dir="./cache").float().to(args.device)
+        tokenizer = AutoTokenizer.from_pretrained("/home/myid//IIFT/weights/vicuna/hf_models/13B/", use_fast=False, padding_side="left", cache_dir="./cache")
     elif args.model == 'llama2':
         model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf").to(args.device)
         tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
