@@ -28,7 +28,6 @@ def main():
     filename = '/home/myid/code/ILME/edit/data/wikidata5m_all_triplet.txt'  # Replace this with your file path
     counterfact_path = '/home/myid/code/ILME/edit/data/MQuAKE-T.json'
     dict_filename = '/home/myid/code/ILME/edit/data/Wikidata_triplets_dict.pkl'  # Replace this with the desired path for saving the dictionary
-    #new_dict_filename = '/home/myid/code/ILME/edit/data/Wikidata_triplets_dict_Edited_CF_3k.pkl' 
     new_dict_filename = '/home/myid/code/ILME/edit/data/Wikidata_triplets_dict_Edited_T.pkl' 
     # Step 1: Load triplets from the file into a dictionary
     triplets_dict = load_triplets_dict(dict_filename)
