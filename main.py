@@ -8,8 +8,6 @@ import logging
 
 from utils_func import  *
 from wiki_api.strings import question_token
-from wiki_api.Wiki import OnelineSearchEngine
-wikisearch = OnelineSearchEngine()
 from model import Extract, Prune 
 
 # Set up logging
@@ -186,11 +184,6 @@ if __name__ == '__main__':
             if args.mode == 'beam':
                 try:
                     raw_entity = ner_entity(questions)
-                    # try:
-                    #     normlized_entity =  wikisearch.normalize(raw_entity)
-                    #     logger.info(f"Raw_entity:'{raw_entity}'. Normlized_entity:'{normlized_entity}'.")
-                    # except:
-                    #     logger.info(f"Raw_entity:'{raw_entity}'")
                     retrieved_fact_str = extractor.multi_hop_search(prom_questions, raw_entity, len(ground_truth_fact)+2, original_fact_needed)
                     pruned_fact_str = pruner.prune_fact(questions, retrieved_fact_str, ans_prompt)
                     logger.info("=======Pruned Fact=======")
