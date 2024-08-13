@@ -8,18 +8,15 @@ RAE is a novel framework for editing knowledge in large language models (LLMs) f
 
 ## Data
 
-### MQUAKE-CF-3k Dataset
+### MQUAKE-CF-3k and MQUAKE-T Edited Knowledge Graph (KG)
 
-To retrieve the MQUAKE-CF-3k dataset:
+You can download from these links: [KG_MQUAKE-CF-3k](https://outlookuga-my.sharepoint.com/:u:/g/personal/ys07245_uga_edu/Ec0O9oUzka5LuNwK3M8FL-YBG3zw7mAdme7V9S9l4cbt7Q?e=3TKvcE) and [KG_MQUAKE-T](https://outlookuga-my.sharepoint.com/:u:/g/personal/ys07245_uga_edu/EckS-8zKM75MgqmJmQH8NQMByT___C5lNyZaIsOXHQXvIQ?e=VVwF2F).
 
-```bash
-cat xa* > data.zip
-unzip data.zip
-```
+Put them into `./data/`.
 
-### Editing Other Datasets
+### Editing from Other Datasets
 
-To build your edited Knowledge Graph (KG):
+To build your edited KG :
 
 ```bash
 python edit_KG.py
@@ -33,6 +30,8 @@ Please refer to `requirements.txt` for the list of dependencies.
 
 ## Running the Code
 
+Ensure you have prepared the edited KG before running:
+
 ### Editing on MQUAKE-CF-3k
 
 ```bash
@@ -40,8 +39,6 @@ python main.py --model gpt2 --mode beam --dataset MQuAKE-CF-3k
 ```
 
 ### Editing on MQUAKE-T
-
-Ensure you have prepared the edited KG before running:
 
 ```bash
 python main.py --model gpt2 --mode beam --dataset MQuAKE-T
