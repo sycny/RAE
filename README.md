@@ -5,6 +5,7 @@ This repository contains the official implementation of our CIKM'2024 paper "[Re
 ## Overview
 
 RAE is a novel framework for editing knowledge in large language models (LLMs) for multi-hop question answering tasks. It employs mutual information maximization for fact retrieval and a self-optimizing technique to prune redundant data.
+![RAE](https://github.com/sycny/sycny.github.io/blob/main/images/work_flowv5.png)
 
 ## Data
 
