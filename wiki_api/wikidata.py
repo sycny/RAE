@@ -111,7 +111,7 @@ def init():
 		property_dict[w[0]] = w[1]
 
 
-init()
+#init()
 # For test only
 '''
 entity = input("Please input the entity name\n")
